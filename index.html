@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Dai — a little birthday page</title>
+<style>
+:root{--bg:#090d18;--cream:#f5efe5;--muted:#b9bfd0;--lav:#c7b8ff;--pink:#f3b8cb;--line:#ffffff20}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 12% 10%,#38345d88,transparent 36%),radial-gradient(ellipse at 90% 42%,#4b263d55,transparent 33%),radial-gradient(ellipse at 50% 100%,#202f4e66,transparent 40%);z-index:-2}
+#sky{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.wrap{width:min(920px,90%);margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase}.logo{color:var(--cream);font-weight:bold;letter-spacing:.18em}.pill{border:1px solid var(--line);border-radius:99px;padding:9px 13px}
+.hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:48px 0 72px;position:relative}
+.eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--lav)}h1{font-family:Georgia,serif;font-weight:400;line-height:.92;font-size:clamp(4rem,14vw,9rem);letter-spacing:-.065em;margin:25px 0 22px}h1 em{color:var(--pink);font-weight:400}.intro{max-width:460px;color:var(--muted);line-height:1.8;font-size:15px}.scroll{margin-top:36px;color:#8f98b3;font-size:10px;letter-spacing:.25em;text-transform:uppercase;animation:breathe 2s infinite}@keyframes breathe{50%{opacity:.4;transform:translateY(5px)}}
+.orbit{position:absolute;border:1px solid #ffffff12;border-radius:50%;width:clamp(260px,65vw,560px);aspect-ratio:1;pointer-events:none}.orbit:after{content:"✦";position:absolute;top:15%;right:9%;color:var(--pink);font-size:20px;animation:spin 12s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+section{padding:55px 0}.section-label{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--lav);margin-bottom:16px}.section-title{font-family:Georgia,serif;font-weight:400;font-size:clamp(2.2rem,7vw,4rem);margin:0 0 24px;letter-spacing:-.04em}.card{border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,#ffffff0d,#ffffff04);backdrop-filter:blur(10px);padding:clamp(22px,5vw,42px);box-shadow:0 20px 80px #0002}
+.note{max-width:650px;margin:auto;line-height:1.95;color:#e5e4ee;font-size:15px}.note p{margin:0 0 17px}.note .salute{font-family:Georgia,serif;font-size:2rem;color:var(--pink);margin-bottom:22px}.signature{font-family:Georgia,serif;font-style:italic;font-size:1.25rem;color:var(--lav);margin-top:30px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.tile{min-height:160px;border:1px solid var(--line);border-radius:18px;padding:22px;background:#ffffff07;display:flex;flex-direction:column;justify-content:space-between}.tile .icon{font-size:26px}.tile strong{font-family:Georgia,serif;font-size:1.2rem;font-weight:400}.tile span{font-size:12px;line-height:1.6;color:var(--muted);margin-top:8px}
+.center{text-align:center}.cake-wrap{font-size:76px;display:inline-block;filter:drop-shadow(0 12px 35px #f3b8cb33);animation:float 3s ease-in-out infinite}@keyframes float{50%{transform:translateY(-12px) rotate(2deg)}}
+button{font:inherit;cursor:pointer;border:1px solid #ffffff32;background:#ffffff0c;color:var(--cream);padding:14px 20px;border-radius:99px;transition:.2s}button:hover{transform:translateY(-2px);background:#ffffff18}.primary{background:var(--cream);color:#151522;border-color:transparent;font-weight:bold}.buttons{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:24px}
+.reveal{display:none;margin:24px auto 0;max-width:540px;padding:24px;border:1px solid #c7b8ff55;border-radius:18px;background:#c7b8ff0b;color:var(--muted);line-height:1.8}.reveal.show{display:block;animation:appear .5s ease}@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+footer{padding:45px 0 35px;text-align:center;color:#737d98;font-size:10px;letter-spacing:.2em;text-transform:uppercase}.heart{color:var(--pink)}
+@media(max-width:620px){.grid{grid-template-columns:1fr}.tile{min-height:125px}.hero{min-height:75vh}.nav{font-size:9px}.pill{padding:8px}}
+</style></head>
+<body><canvas id="sky"></canvas>
+<header class="wrap nav"><div class="logo">A SMALL THING ✦</div><div class="pill">made for Dai</div></header>
+<main>
+<section class="hero wrap"><div class="orbit"></div><div class="eyebrow">a little birthday universe</div><h1>Happy<br><em>Birthday,</em><br>Dai.</h1><p class="intro">Hari ini dunia nambah satu alasan buat ngerayain seseorang. Jadi, aku bikin halaman kecil ini khusus buat kamu.</p><div class="scroll">scroll pelan-pelan ↓</div></section>
+<section class="wrap"><div class="section-label">01 / a note for you</div><h2 class="section-title">Bukan kado mahal,<br>tapi niatnya ada.</h2>
+<div class="card note"><div class="salute">Hai, Dai! ✉</div>
+<p>Selamat ulang tahun, yaa! 🥳</p>
+<p>Semoga di umur kamu yang sekarang, hal-hal baik makin sering dateng. Semoga kamu selalu sehat, urusan kamu dilancarin, rezekinya dimudahin, dan apa pun yang lagi kamu usahain bisa nemu jalannya satu-satu.</p>
+<p>Aku juga berharap kamu dikelilingi orang-orang yang tulus, punya banyak alasan buat ketawa, dan tetap punya semangat meskipun kadang hari lagi ngeselin banget. Kalau ada hari yang nggak berjalan sesuai rencana, semoga kamu tetap inget kalau satu hari buruk nggak bikin semuanya jadi buruk.</p>
+<p>Makasih udah jadi temen yang asik. Kita mungkin nggak punya banyak foto kenangan buat dipajang, jadi aku bikin kenangannya dari nol aja—website dadakan yang semoga nggak bikin HP kamu meledak, wkwk.</p>
+<p>Pokoknya, semoga tahun ini jadi bab yang lebih seru buat kamu. Jangan lupa istirahat, makan yang bener, dan kasih diri kamu apresiasi juga. Kamu udah sampai sejauh ini, dan itu tetap layak dirayain.</p>
+<p>Enjoy your day, Dai. Semoga banyak kejutan baik yang datang, bukan kejutan tugas dadakan. Amin paling serius. 🤝</p>
+<div class="signature">dari aku, temen kamu ✦</div></div></section>
+<section class="wrap"><div class="section-label">02 / birthday wishes</div><h2 class="section-title">A few things<br>I wish for you.</h2><div class="grid">
+<div class="tile"><div class="icon">☾</div><div><strong>More peace.</strong><span>Semoga pikiran kamu lebih tenang dan hati nggak kebanyakan beban.</span></div></div>
+<div class="tile"><div class="icon">✧</div><div><strong>Good things.</strong><span>Semoga kesempatan baik datang di waktu yang tepat.</span></div></div>
+<div class="tile"><div class="icon">☼</div><div><strong>More laughter.</strong><span>Semoga hidup kamu punya banyak momen kecil yang bikin bahagia.</span></div></div>
+</div></section>
+<section class="wrap center"><div class="section-label">03 / make a wish</div><h2 class="section-title">One more thing.</h2><div class="cake-wrap">🎂</div><p class="intro" style="margin:12px auto">Tarik napas, bikin harapan, lalu pencet tombolnya.</p><div class="buttons"><button class="primary" id="wish">Make a wish ✨</button><button id="confetti">Send some stars ↗</button></div><div class="reveal" id="reveal">✨ Semoga doa-doa baik kamu pelan-pelan jadi nyata, Dai. Tahun baru dalam hidup kamu—semoga isinya lebih banyak bahagia, keberanian, dan cerita seru. Happy birthday sekali lagi! <span class="heart">♥</span></div></section>
+</main><footer>made with <span class="heart">♥</span> and a little bit of chaos · for Dai</footer>
+<script>
+const canvas=document.getElementById('sky'),ctx=canvas.getContext('2d');let w,h,stars=[];
+function resize(){w=canvas.width=innerWidth*devicePixelRatio;h=canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';stars=Array.from({length:90},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.6+.3,a:Math.random(),s:Math.random()*.012+.003}))}
+function draw(){ctx.clearRect(0,0,w,h);for(const s of stars){s.a+=s.s;if(s.a>1||s.a<0)s.s*=-1;ctx.beginPath();ctx.arc(s.x,s.y,s.r*devicePixelRatio,0,Math.PI*2);ctx.fillStyle=`rgba(238,230,255,${Math.abs(s.a)})`;ctx.fill()}requestAnimationFrame(draw)}addEventListener('resize',resize);resize();draw();
+function burst(){const chars=['✦','✧','✴','✷','⋆','✨'];for(let i=0;i<45;i++){let e=document.createElement('span');e.textContent=chars[Math.floor(Math.random()*chars.length)];e.style.cssText=`position:fixed;left:${Math.random()*100}vw;bottom:-25px;color:${Math.random()>.5?'#f3b8cb':'#c7b8ff'};font-size:${12+Math.random()*23}px;z-index:9;pointer-events:none;transition:transform ${2+Math.random()*2}s linear,opacity 3s`;document.body.appendChild(e);requestAnimationFrame(()=>{e.style.transform=`translate(${(Math.random()-.5)*180}px,-${innerHeight+100}px) rotate(${Math.random()*500}deg)`;e.style.opacity='0'});setTimeout(()=>e.remove(),4300)}}
+document.getElementById('wish').onclick=()=>{document.getElementById('reveal').classList.add('show');burst();document.getElementById('wish').textContent='Wish sent ✓'};document.getElementById('confetti').onclick=burst;
+</script></body></html>
